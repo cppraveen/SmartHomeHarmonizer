@@ -77,7 +77,7 @@ def validate_color(color: Dict[str, Any]) -> bool:
         return False
 
 
-def validate_parameters(parameters: Dict[str, Any], required_keys: List[str] = None) -> bool:
+def validate_parameters(parameters: Dict[str, Any], required_keys: Optional[List[str]] = None) -> bool:
     """Validate command parameters.
     
     Args:
