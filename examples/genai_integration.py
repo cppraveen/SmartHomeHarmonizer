@@ -453,31 +453,11 @@ def create_genai_app(device_manager: DeviceManager = None):
 
 # Example usage
 if __name__ == '__main__':
-    # Create device manager
+    # Create device manager and register devices
     manager = DeviceManager()
+    light = SmartLightAdapter('light1', 'Living Room Light')
+    manager.register_device(light)
     
-    # Register multiple devices
-    devices = [
-        SmartLightAdapter('living_room_light', 'Living Room Light'),
-        SmartLightAdapter('bedroom_light', 'Bedroom Light'),
-        SmartLightAdapter('kitchen_light', 'Kitchen Light'),
-        SmartLightAdapter('office_light', 'Office Light'),
-    ]
-    
-    for device in devices:
-        manager.register_device(device)
-    
-    # Create GenAI-enabled app
-    app = create_genai_app(manager)
-    
-    print("GenAI-enabled SmartHomeHarmonizer is running!")
-    print("\nTry these natural language commands:")
-    print("  POST /api/v1/genai/command")
-    print("    {'text': 'turn on all the lights'}")
-    print("    {'text': 'dim the bedroom light'}")
-    print("    {'text': 'set movie scene'}")
-    print("    {'text': 'what is the status of the living room?'}")
-    print("\nOr use the chat endpoint for conversations:")
-    print("  POST /api/v1/genai/chat")
-    
-    app.run(host='0.0.0.0', port=5000, debug=True) 
+    # Create and run Flask app
+    app = create_app(manager)
+    app.run(host='0.0.0.0', port=5000)
