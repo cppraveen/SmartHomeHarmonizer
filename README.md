@@ -4,6 +4,7 @@
 [![codecov](https://codecov.io/gh/yourusername/SmartHomeHarmonizer/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/SmartHomeHarmonizer)
 [![Documentation Status](https://readthedocs.org/projects/smarthomeharmonizer/badge/?version=latest)](https://smarthomeharmonizer.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/smarthomeharmonizer.svg)](https://badge.fury.io/py/smarthomeharmonizer)
+[![PyPI downloads](https://img.shields.io/pypi/dm/smarthomeharmonizer.svg)](https://pypi.org/project/smarthomeharmonizer/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![JOSS](https://joss.theoj.org/papers/10.21105/joss.xxxxx/status.svg)](https://doi.org/10.21105/joss.xxxxx)
 
@@ -23,8 +24,14 @@ SmartHomeHarmonizer simplifies the integration of custom IoT devices with popula
 
 ### Installation
 
+**Install from PyPI (Recommended):**
 ```bash
 pip install smarthomeharmonizer
+```
+
+**For development:**
+```bash
+pip install -e ".[dev]"
 ```
 
 ### Basic Usage

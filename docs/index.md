@@ -14,6 +14,7 @@ SmartHomeHarmonizer provides a unified interface for integrating custom IoT devi
 - **Thread-Safe**: Concurrent device access with proper synchronization
 - **Extensible**: Plugin architecture for new devices and platforms
 - **Well-Tested**: Comprehensive test suite with >90% coverage
+- **PyPI Available**: Easy installation via `pip install smarthomeharmonizer`
 
 ## Quick Links
 
@@ -32,6 +33,7 @@ Unlike comprehensive home automation platforms that try to do everything, SmartH
 - **Lower Resource Usage**: Runs comfortably on a Raspberry Pi 3B+
 - **Easier Debugging**: Simple, understandable codebase
 - **Better Learning**: Perfect for understanding how voice assistants work
+- **Easy Installation**: One command to get started: `pip install smarthomeharmonizer`
 
 ## Architecture Overview
 
@@ -89,6 +91,7 @@ Unlike comprehensive home automation platforms that try to do everything, SmartH
 ## Community
 
 - **GitHub**: [github.com/cppraveen/SmartHomeHarmonizer](https://github.com/cppraveen/SmartHomeHarmonizer)
+- **PyPI**: [pypi.org/project/smarthomeharmonizer](https://pypi.org/project/smarthomeharmonizer/)
 - **Issues**: [Report bugs or request features](https://github.com/cppraveen/SmartHomeHarmonizer/issues)
 - **Discussions**: [Join the conversation](https://github.com/cppraveen/SmartHomeHarmonizer/discussions)
 

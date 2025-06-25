@@ -10,11 +10,13 @@ This guide covers installing SmartHomeHarmonizer on various platforms.
 
 ## Quick Install
 
-The easiest way to install SmartHomeHarmonizer is via pip:
+**SmartHomeHarmonizer is available on PyPI!** The easiest way to install is via pip:
 
 ```bash
 pip install smarthomeharmonizer
 ```
+
+This will install the latest stable version with all required dependencies.
 
 ## Development Installation
 
@@ -47,7 +49,7 @@ sudo apt-get upgrade
 # Install Python and pip
 sudo apt-get install python3 python3-pip
 
-# Install SmartHomeHarmonizer
+# Install SmartHomeHarmonizer from PyPI
 pip3 install smarthomeharmonizer
 
 # For GPIO access (if needed)
@@ -63,10 +65,8 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
+# Install SmartHomeHarmonizer from PyPI
+RUN pip install smarthomeharmonizer
 
 EXPOSE 5000
 
@@ -91,7 +91,7 @@ sudo apt-get install python3 python3-pip python3-venv
 python3 -m venv ~/smarthomeharmonizer-env
 source ~/smarthomeharmonizer-env/bin/activate
 
-# Install
+# Install from PyPI
 pip install smarthomeharmonizer
 ```
 
@@ -101,7 +101,7 @@ pip install smarthomeharmonizer
 # Using Homebrew
 brew install python@3.10
 
-# Install SmartHomeHarmonizer
+# Install SmartHomeHarmonizer from PyPI
 pip3 install smarthomeharmonizer
 ```
 
@@ -136,6 +136,7 @@ python -m smarthomeharmonizer.examples.basic_usage
 1. **ImportError: No module named 'smarthomeharmonizer'**
    - Ensure you've activated your virtual environment
    - Check that installation completed successfully
+   - Try: `pip install --upgrade smarthomeharmonizer`
 
 2. **Permission denied errors**
    - Use `pip install --user smarthomeharmonizer` for user installation
@@ -144,6 +145,11 @@ python -m smarthomeharmonizer.examples.basic_usage
 3. **Version conflicts**
    - Create a fresh virtual environment
    - Update pip: `pip install --upgrade pip`
+
+4. **PyPI connection issues**
+   - Check your internet connection
+   - Try using a different DNS server
+   - Use `pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org smarthomeharmonizer`
 
 ### Getting Help
 

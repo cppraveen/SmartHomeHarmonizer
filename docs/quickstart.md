@@ -4,9 +4,12 @@ Get SmartHomeHarmonizer running in 5 minutes!
 
 ## Step 1: Installation
 
+**Install from PyPI (Recommended):**
 ```bash
 pip install smarthomeharmonizer
 ```
+
+That's it! SmartHomeHarmonizer is now installed with all dependencies.
 
 ## Step 2: Create Your First Device
 
@@ -138,6 +141,20 @@ sudo ufw allow 5000
 
 # Or run on all interfaces
 app.run(host='0.0.0.0', port=5000)
+```
+
+### Installation Issues
+
+If you have trouble installing:
+```bash
+# Upgrade pip first
+pip install --upgrade pip
+
+# Install with verbose output
+pip install -v smarthomeharmonizer
+
+# Or install in user space
+pip install --user smarthomeharmonizer
 ```
 
 ## Example Projects

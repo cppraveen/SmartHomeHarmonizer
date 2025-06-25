@@ -1,4 +1,10 @@
-"""Basic usage example for SmartHomeHarmonizer."""
+"""Basic usage example for SmartHomeHarmonizer.
+
+To run this example:
+1. Install SmartHomeHarmonizer: pip install smarthomeharmonizer
+2. Run: python basic_usage.py
+3. Test with: curl http://localhost:5000/api/v1/devices
+"""
 
 from smarthomeharmonizer import create_app, DeviceManager
 from smarthomeharmonizer.adapters.smart_light import SmartLightAdapter
